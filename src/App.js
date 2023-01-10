@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import data from "./data/data";
+import Movie from "./components/movie";
 
 function App() {
+  const movies = data;
+  let allMovies = [];
+
+  allMovies = movies.map((movie) => {
+    return <Movie movie={movie} />;
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div class="justify-content-center d-flex flex-wrap gap-3">{allMovies}</div>
   );
 }
 

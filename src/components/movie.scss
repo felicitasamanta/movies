@@ -26,23 +26,23 @@ span {
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     transform: rotateY(180deg);
   }
+  &:is(.front, .back) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    width: 350px;
+    height: 350px;
+  }
   .back {
     transform: rotateY(180deg);
     background-color: #dcb0ff;
+    border-radius: var(--bs-border-radius) !important;
     span {
       color: white;
     }
   }
 }
-
-// .card_:is(.front, .back) {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   backface-visibility: hidden;
-//   width: 350px;
-//   height: 350px;
-// }
 
 .card_ .front,
 .card_ .back {
@@ -54,7 +54,7 @@ span {
   height: 350px;
 }
 .card_container {
-  perspective: 700;
+  perspective: 1000;
 }
 
 .card_body {
@@ -80,6 +80,8 @@ span {
 }
 .list-group {
   color: #a178df;
+  min-height: 200px;
+  padding: 10px;
   ul {
     padding-left: 0;
     h3 {

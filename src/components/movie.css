@@ -27,9 +27,19 @@ span {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   transform: rotateY(180deg);
 }
+.card_:is(.front, .back) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  width: 350px;
+  height: 350px;
+}
 .card_ .back {
   transform: rotateY(180deg);
   background-color: #dcb0ff;
+  border-radius: var(--bs-border-radius) !important;
 }
 .card_ .back span {
   color: white;
@@ -47,7 +57,7 @@ span {
 }
 
 .card_container {
-  perspective: 700;
+  perspective: 1000;
 }
 
 .card_body {
@@ -70,6 +80,8 @@ span {
 
 .list-group {
   color: #a178df;
+  min-height: 200px;
+  padding: 10px;
 }
 .list-group ul {
   padding-left: 0;

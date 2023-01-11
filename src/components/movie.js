@@ -17,7 +17,7 @@ function Movie(props) {
             {fid}. {title}
           </h5>
         </div>
-        <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush ">
           <li class="list-group-item">
             <ul class="list d-flex justify-content-around ">
               <h3>{category}</h3>

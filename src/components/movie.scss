@@ -1,22 +1,63 @@
+* {
+  color: #845ec2;
+}
 span {
   font-weight: bold;
 }
+
 .card > .list-group {
   border-bottom: none;
 }
-.hover {
+.background {
+  background-color: #dcb0ff;
+}
+.card_ {
+  position: relative;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all 1s ease;
+  transform-style: preserve-3d;
+  text-align: center;
+  width: 350px;
+  height: 350px;
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
       rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    color: violet;
+    transform: rotateY(180deg);
+  }
+  .back {
+    transform: rotateY(180deg);
+    background-color: #dcb0ff;
+    span {
+      color: white;
+    }
   }
 }
 
+// .card_:is(.front, .back) {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   backface-visibility: hidden;
+//   width: 350px;
+//   height: 350px;
+// }
+
+.card_ .front,
+.card_ .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  width: 350px;
+  height: 350px;
+}
+.card_container {
+  perspective: 700;
+}
+
 .card_body {
-  background-color: rgb(139, 0, 139, 0.5);
   flex: 0 0;
 
   min-height: 50px;
@@ -30,9 +71,32 @@ span {
   h5 {
     padding: 0;
     margin: 0;
+    font-weight: bolder;
   }
 
   .card-link {
     text-align: center;
+  }
+}
+.list-group {
+  color: #a178df;
+  ul {
+    padding-left: 0;
+    h3 {
+      text-transform: none;
+      font-size: 12px;
+      font-weight: bolder;
+    }
+  }
+}
+.price {
+  background-color: rgb(250, 204, 255, 0.3);
+}
+.button {
+  background-color: #dcb0ff;
+  border: #dcb0ff;
+
+  &:hover {
+    background-color: #be93fd;
   }
 }

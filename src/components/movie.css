@@ -1,3 +1,7 @@
+* {
+  color: #845ec2;
+}
+
 span {
   font-weight: bold;
 }
@@ -6,16 +10,47 @@ span {
   border-bottom: none;
 }
 
-.hover {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+.background {
+  background-color: #dcb0ff;
 }
-.hover:hover {
+
+.card_ {
+  position: relative;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all 1s ease;
+  transform-style: preserve-3d;
+  text-align: center;
+  width: 350px;
+  height: 350px;
+}
+.card_:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  color: violet;
+  transform: rotateY(180deg);
+}
+.card_ .back {
+  transform: rotateY(180deg);
+  background-color: #dcb0ff;
+}
+.card_ .back span {
+  color: white;
+}
+
+.card_ .front,
+.card_ .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  width: 350px;
+  height: 350px;
+}
+
+.card_container {
+  perspective: 700;
 }
 
 .card_body {
-  background-color: rgba(139, 0, 139, 0.5);
   flex: 0 0;
   min-height: 50px;
   display: flex;
@@ -27,7 +62,32 @@ span {
 .card_body h5 {
   padding: 0;
   margin: 0;
+  font-weight: bolder;
 }
 .card_body .card-link {
   text-align: center;
+}
+
+.list-group {
+  color: #a178df;
+}
+.list-group ul {
+  padding-left: 0;
+}
+.list-group ul h3 {
+  text-transform: none;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.price {
+  background-color: rgba(250, 204, 255, 0.3);
+}
+
+.button {
+  background-color: #dcb0ff;
+  border: #dcb0ff;
+}
+.button:hover {
+  background-color: #be93fd;
 }/*# sourceMappingURL=movie.css.map */

@@ -10,36 +10,36 @@ function Movie(props) {
   const actors = props.movie.actors;
 
   return (
-    <div class="hover card col-4 p-3 mb-5 bg-body rounded">
-      <div class="card-body card_body">
-        <h5 class="card-title">
-          {fid}. {title}
-        </h5>
+    <div class=" col-lg-6 col-sm-10 mb-5 background card card_  bg-body rounded">
+      <div class="front">
+        <div class="card-body card_body background">
+          <h5 class="card-title text-center ">
+            {fid}. {title}
+          </h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <ul class="list d-flex justify-content-around ">
+              <h3>{category}</h3>
+              <h3>{length} min</h3>
+              <h3> rating: {rating}</h3>
+            </ul>
+          </li>
+          <li class="list-group-item price">
+            <span>Price:</span> {price} EUR
+          </li>
+          <li class="list-group-item">
+            <span>Actors:</span> {actors}
+          </li>
+        </ul>
+        <div class="card-body d-flex justify-content-center align-items-end">
+          <a href="#" class="card-link btn button btn-primary ">
+            WATCH TRAILER
+          </a>
+        </div>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-          <span>Description :</span> {description}
-        </li>
-        <li class="list-group-item">
-          <span>Category:</span> {category}
-        </li>
-        <li class="list-group-item">
-          <span>Price:</span> {price}
-        </li>
-        <li class="list-group-item">
-          <span>Length:</span> {length}
-        </li>
-        <li class="list-group-item">
-          <span>Rating:</span> {rating}
-        </li>
-        <li class="list-group-item">
-          <span>Actors:</span> {actors}
-        </li>
-      </ul>
-      <div class="card-body d-flex justify-content-center align-items-end">
-        <a href="#" class="card-link btn btn-primary ">
-          READ MORE
-        </a>
+      <div class="back d-flex-column p-3 text-left justify-content-center">
+        <span>Description:</span> {description}
       </div>
     </div>
   );

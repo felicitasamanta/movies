@@ -1,6 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
+import "./components/movie.css";
+
 import data from "./data/data";
 import Movie from "./components/movie";
 
@@ -12,7 +13,9 @@ function App() {
     return <Movie movie={movie} />;
   });
   return (
-    <div class="justify-content-center d-flex flex-wrap gap-3">{allMovies}</div>
+    <div class="card_container justify-content-center d-flex flex-wrap gap-3 mt-5">
+      {allMovies}
+    </div>
   );
 }
 

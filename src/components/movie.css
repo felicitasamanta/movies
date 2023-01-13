@@ -44,7 +44,6 @@ span {
 .card_ .back span {
   color: white;
 }
-
 .card_ .front,
 .card_ .back {
   position: absolute;
@@ -76,6 +75,7 @@ span {
 }
 .card_body .card-link {
   text-align: center;
+  background-color: #845ec2;
 }
 
 .list-group {
@@ -97,9 +97,11 @@ span {
 }
 
 .button {
-  background-color: #dcb0ff;
+  background-color: #be93fd;
   border: #dcb0ff;
+  color: white;
 }
 .button:hover {
-  background-color: #be93fd;
+  background-color: #845ec2;
+  color: white;
 }/*# sourceMappingURL=movie.css.map */

@@ -40,6 +40,9 @@ span {
     border-radius: var(--bs-border-radius) !important;
     span {
       color: white;
+
+      a {
+      }
     }
   }
 }
@@ -76,6 +79,7 @@ span {
 
   .card-link {
     text-align: center;
+    background-color: #845ec2;
   }
 }
 .list-group {
@@ -95,10 +99,12 @@ span {
   background-color: rgb(250, 204, 255, 0.3);
 }
 .button {
-  background-color: #dcb0ff;
+  background-color: #be93fd;
   border: #dcb0ff;
+  color: white;
 
   &:hover {
-    background-color: #be93fd;
+    background-color: #845ec2;
+    color: white;
   }
 }
